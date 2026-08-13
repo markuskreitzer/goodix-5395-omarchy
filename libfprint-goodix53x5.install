@@ -1,0 +1,7 @@
+post_upgrade() {
+  printf '%s\n' \
+    'libfprint-goodix53x5 can change its fingerprint template format.' \
+    'If verification stops after an upgrade, delete and re-enroll the print:' \
+    '  fprintd-delete "$USER"' \
+    '  fprintd-enroll -f right-index-finger "$USER"'
+}
